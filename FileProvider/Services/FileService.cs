@@ -19,7 +19,7 @@ public class FileService(ILogger<FileService> logger, DataContext context, BlobS
     public async Task SetBlobContainerAsync(string containerName)
     {
         _container = _client.GetBlobContainerClient(containerName); //hämtar in en container, vad för typ av container och inte private, står i dokumentationen 
-        await _container.CreateIfNotExistsAsync(); //skapar om den inte finns
+        await _container.CreateIfNotExistsAsync(PublicAccessType.BlobContainer); //skapar om den inte finns
     }
 
     public string SetFileName(IFormFile file)
