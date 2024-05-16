@@ -18,9 +18,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Contexts\" />
-    <Folder Include="Entities\" />
-  </ItemGroup>
-
 </Project>
